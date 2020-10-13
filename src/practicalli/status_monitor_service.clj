@@ -30,6 +30,7 @@
     (reset! app-server-instance nil)
     (println "INFO: Application server stopped!")))
 
+
 (defn -main
   "Start the application server and run the application"
   [port]
@@ -37,7 +38,6 @@
 
   (reset! app-server-instance
           (app-server/run-server #'status-monitor {:port (Integer/parseInt port)})))
-
 
 
 (defn restart-app-server

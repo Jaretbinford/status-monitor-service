@@ -2,6 +2,7 @@
   (:gen-class)
   (:require [org.httpkit.server  :as app-server]
             [compojure.core      :refer [defroutes GET]]
+            [compojure.route     :refer [not-found]]
             [ring.handler.dump   :refer [handle-dump]]
             [ring.util.response  :refer [response]]))
 

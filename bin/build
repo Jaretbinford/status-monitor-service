@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-clojure -M:uberjar
+clojure -A:uberjar

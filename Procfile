@@ -1,1 +1,1 @@
-web: java -jar status-monitor-service.jar $PORT
+web: java $JVM_OPTS -jar status-monitor-service.jar $PORT

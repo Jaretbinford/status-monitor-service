@@ -5,8 +5,6 @@
             [ring.handler.dump   :refer [handle-dump]]
             [ring.util.response  :refer [response]]))
 
-(defonce app-server-instance (atom nil))
-
 ;request handler
 
 (defn dashboard
@@ -21,13 +19,7 @@
 
 ;functions
 
-(defn -main
-  "Start the application server and run the application"
-  [port]
-  (println "INFO: Starting server on port: " port)
-
-  (reset! app-server-instance
-          (app-server/run-server #'status-monitor {:port (Integer/parseInt port)})))
+(defonce app-server-instance (atom nil))
 
 (defn stop-app-server
   "Gracefully shutdown the server after waiting 100ms"
@@ -37,11 +29,21 @@
     (reset! app-server-instance nil)
     (println "INFO: Application server stopped!")))
 
+(defn -main
+  "Start the application server and run the application"
+  [port]
+  (println "INFO: Starting server on port: " port)
+
+  (reset! app-server-instance
+          (app-server/run-server #'status-monitor {:port (Integer/parseInt port)})))
+
+
+
 (defn restart-app-server
   "Function to stop and start the application server"
   []
   (stop-app-server)
-  (-main "8001"))
+  (-main))
 
 (comment
   ;start

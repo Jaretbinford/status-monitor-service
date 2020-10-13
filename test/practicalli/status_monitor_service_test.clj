@@ -16,7 +16,6 @@
   (ring.util.response/content-type
     (ring.util.response/response (:remote-addr request))
     "text/plain"))
-;testing CI
 
 (comment
 (ring.util.response/bad-request "Hello")

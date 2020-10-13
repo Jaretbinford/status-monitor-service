@@ -1,14 +1,12 @@
 # status-monitor-service
 
-FIXME: my new application.
+An application to explore CircleCI and Heroku build and deploy integration.
 
 ## Installation
 
 Download from https://github.com/practicalli/status-monitor-service
 
 ## Usage
-
-FIXME: explanation
 
 Run the project directly:
 
@@ -25,22 +23,21 @@ Build an uberjar:
 Run that uberjar:
 
     $ java -jar status-monitor-service.jar
+    
+Stop the Heroku app by scaling down
 
-## Options
+    $ heroku ps:scale web=0 -a APPNAME-status-monitor-service
+    $ heroku ps:scale -a APPNAME-status-monitor-service
+      > web=0:Free
 
-FIXME: listing of options this app accepts.
+
 
 ## Examples
 
-...
+    $https://APPNAME-status-monitor-service.herokuapp.com/request-dump
 
-### Bugs
+    $http://localhost:9000/request-dump
 
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
 
 ## License
 See Creative Commons LICENSE included in the source directory.

@@ -1,4 +1,18 @@
-version: 2.0
+version: 2.1
+orbs:
+  heroku: circleci/heroku@0.0.10. # Invoke the Heroku orb
+
+workflows:
+  heroku_deploy:
+    jobs:
+      - build
+      - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+
 jobs:
   build:
     working_directory: ~/build

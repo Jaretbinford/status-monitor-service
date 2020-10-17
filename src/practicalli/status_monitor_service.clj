@@ -4,7 +4,8 @@
             [compojure.core      :refer [defroutes GET]]
             [compojure.route     :refer [not-found]]
             [ring.handler.dump   :refer [handle-dump]]
-            [ring.util.response  :refer [response]]))
+            [ring.util.response  :refer [response]]
+            [practicalli.request-handlers :as handler]))
 
 ;request handler
 
@@ -12,11 +13,18 @@
   [request]
   (response "Status Monitor Dashboard via CircleCI and Heroku"))
 
+(defn register
+  [request]
+  (response "REGISTER OR SOMETHING"))
+
 ;default route handler application
 
 (defroutes status-monitor
            (GET "/" [] dashboard)
-           (GET "/request-dump" [] handle-dump))
+           (GET "/request-dump" [] handle-dump)
+           (GET "/welcome" [] handler/welcome-page)
+           (GET "/scoreboard" [] handler/scoreboard)
+           (GET "/register" [] register))
 
 ;functions
 

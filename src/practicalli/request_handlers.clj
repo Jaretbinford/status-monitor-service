@@ -25,10 +25,10 @@
          (link-to {:class "button is-danger"}  "/register" "Register")
          [:p {:class "content"}
           "Manage your money without unexpected side-effects using a simple made easy banking service"]
-         [:img {:src "mafiadog.png"}]]]
+         [:img {:src "mafiadog.jpg"}]]]
        ])))
 
 (def scoreboard
   [:div
    [:h1 "Mafia Scoreboard!"]
-   [:img {:src mafiadog.jpg} "A sunny seaside view"]])
+   [:img {:src "mafiadog.jpg"} "A sunny seaside view"]])

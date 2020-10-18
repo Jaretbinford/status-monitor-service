@@ -31,6 +31,8 @@
 (defn scoreboard
   [request]
   (response
+    (html5
   [:div
    [:h1 "Mafia Scoreboard!"]
-   [:img {:src "https://github.com/Jaretbinford/status-monitor-service/blob/master/src/mafiadog.jpg"}]]))
+   [:img {:src "https://github.com/Jaretbinford/status-monitor-service/blob/master/src/mafiadog.jpg"}]])))
+

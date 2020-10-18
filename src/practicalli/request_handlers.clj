@@ -28,7 +28,9 @@
          [:img {:src "https://github.com/Jaretbinford/status-monitor-service/blob/master/src/mafiadog.jpg"}]]]
        ])))
 
-(def scoreboard
+(defn scoreboard
+  [request]
+  (response
   [:div
    [:h1 "Mafia Scoreboard!"]
-   [:img {:src "https://github.com/Jaretbinford/status-monitor-service/blob/master/src/mafiadog.jpg"} "Da crew!"]])
+   [:img {:src "https://github.com/Jaretbinford/status-monitor-service/blob/master/src/mafiadog.jpg"}]]))

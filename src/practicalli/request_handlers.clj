@@ -20,12 +20,12 @@
            "Where the dog's keep score"]]]]
 
        [:section {:class "section"}
-        [:div {:class "container"}
-         (link-to {:class "button is-primary"} "/scoreboard"  "Login")
-         (link-to {:class "button is-danger"}  "/register" "Register")
+        [:div {:class "container" :align "center"}
+         (link-to {:class "button is-primary"} "/scoreboard"  "Scoreboard")
+         (link-to {:class "button is-danger"}  "/pics" "Woof!")
          [:p {:class "content"}
-          "Manage your money without unexpected side-effects using a simple made easy banking service"]
-         [:img {:src "https://github.com/Jaretbinford/status-monitor-service/blob/master/src/mafiadog.jpg"}]]]
+          "Where your true identities are tracked!"]
+         [:img {:src "https://raw.githubusercontent.com/Jaretbinford/status-monitor-service/master/src/mafiadog.jpg"}]]]
        ])))
 
 (defn scoreboard
@@ -34,5 +34,13 @@
     (html5
   [:div
    [:h1 "Mafia Scoreboard!"]
-   [:img {:src "https://github.com/Jaretbinford/status-monitor-service/blob/master/src/mafiadog.jpg"}]])))
+   [:img {:src "https://raw.githubusercontent.com/Jaretbinford/status-monitor-service/master/src/mafiadog.jpg"}]])))
+
+(defn pictures
+  [request]
+  (response
+    (html5
+      [:div
+       [:h1 "Mafia Scoreboard!"]
+       [:img {:src "https://raw.githubusercontent.com/Jaretbinford/status-monitor-service/master/src/mafiadog.jpg"}]])))
 

@@ -24,7 +24,7 @@
            (GET "/request-dump" [] handle-dump)
            (GET "/welcome" [] handler/welcome-page)
            (GET "/scoreboard" [] handler/scoreboard)
-           (GET "/register" [] register))
+           (GET "/pictures" [] handler/pictures))
 
 ;functions
 
